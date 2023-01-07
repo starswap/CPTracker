@@ -1,0 +1,95 @@
+#square {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#midrow {
+    display: flex;
+    flex-direction: row;
+}
+
+#top,  #bottom, #left, #right {
+    flex-grow: 1;
+}
+
+#top, #bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+#left, #right {
+    display: flex;
+    flex-direction: column;
+}
+
+#midrow, #midsquare {
+    flex-grow: 4;
+}
+
+.grow {
+    background-color: lightgreen;
+    flex-grow: 0;
+
+}
+.horiz {
+    height: 100%;
+}
+.vert {
+    width: 100%;
+}
+
+.grow.animate {
+    transition: all 1s;
+    flex-grow: 1;
+}
+
+.shrink {
+    flex-grow: 1;
+}
+
+.shrink.animate {
+    transition: all 1s;
+    flex-grow: 0;
+}
+
+#midsquare {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../public/code-dimmed.png); /* from freepik*/
+    background-size: 80%; /* Resize the background image to cover the entire container */
+    background-position-x: 95%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    
+}
+
+#midsquare.animate {
+    transition: all 2s;
+    background-image: url(../../public/code.png); /* from freepik*/
+}
+
+
+#streak-counter {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+
+    /* height: 0px; */
+    /* width: 0px; */
+}
+
+#streak-counter.activated {
+    transition: all 2s;
+    border-color: white;
+    color: white;
+    background-color: rgba(66,76,89,255);
+}
+
+#streak-counter.deactivated {
+    color: lightgray;
+}
